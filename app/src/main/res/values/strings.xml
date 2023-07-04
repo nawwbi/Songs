@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Songs</string>
+
+    <string name="textView">Song Title</string>
+    <string name="textView2">Singers</string>
+    <string name="textView3">Year</string>
+    <string name="textView4">Stars</string>
+
+    <string name="editTextText">Enter song title here</string>
+    <string name="editTextText2">Enter singers name here</string>
+    <string name="editTextText3">Enter year of release here</string>
+
+    <string name="radioButton">1</string>
+    <string name="radioButton2">2</string>
+    <string name="radioButton3">3</string>
+    <string name="radioButton4">4</string>
+    <string name="radioButton5">5</string>
+
+    <string name="button">INSERT</string>
+    <string name="button2">SHOW LIST</string>
+</resources>
