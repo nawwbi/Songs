@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -59,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
 
             DBHelper db = new DBHelper(MainActivity.this);
             db.insertSong(songInput, singerInput, yearInput, starsInput);
+            Toast.makeText(MainActivity.this, "Song successfully added!", Toast.LENGTH_SHORT).show();
+            etSong.setText(null);
+            etSinger.setText(null);
+            etYear.setText(null);
+            rgStars.clearCheck();
         });
 
         btnShow.setOnClickListener(v -> {

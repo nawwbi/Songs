@@ -18,4 +18,27 @@
 
     <string name="button">INSERT</string>
     <string name="button2">SHOW LIST</string>
+
+    <string name="button3">SHOW ALL SONGS WITH 5 STARS</string>
+
+    <string name="button7">BACK</string>
+
+    <string name="textView5">Song Title</string>
+    <string name="textView6">Singers</string>
+    <string name="textView7">Year</string>
+    <string name="textView8">Stars</string>
+
+    <string name="editTextText4">Enter song title here</string>
+    <string name="editTextText5">Enter singers name here</string>
+    <string name="editTextText6">Enter year of release here</string>
+
+    <string name="radioButton6">1</string>
+    <string name="radioButton7">2</string>
+    <string name="radioButton8">3</string>
+    <string name="radioButton9">4</string>
+    <string name="radioButton10">5</string>
+
+    <string name="button4">UPDATE</string>
+    <string name="button5">DELETE</string>
+    <string name="button6">CANCEL</string>
 </resources>

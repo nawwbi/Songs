@@ -2,7 +2,9 @@ package sg.edu.rp.c346.id22024713.songs;
 
 import androidx.annotation.NonNull;
 
-public class Song {
+import java.io.Serializable;
+
+public class Song implements Serializable {
     private int id;
     private String title;
     private String singers;
@@ -16,27 +18,40 @@ public class Song {
         this.year = year;
         this.stars = stars;
     }
+
     public int getId() {
         return id;
     }
+
     public String getTitle() {
         return title;
     }
+
     public String getSingers() {
         return singers;
     }
+
     public int getYear() {
         return year;
     }
+
     public int getStars() {
         return stars;
     }
+
     @NonNull
     @Override
     public String toString() {
         return "Title: " + title + "\n" +
-                "Artist(s): "+ singers + "\n" +
+                "Artist(s): " + singers + "\n" +
                 "Year produced: " + year + "\n" +
                 "Stars: " + stars;
+    }
+
+    public void setSongContent(String title, String singers, int year, int stars) {
+        this.title = title;
+        this.singers = singers;
+        this.year = year;
+        this.stars = stars;
     }
 }
