@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 
@@ -14,6 +15,7 @@ public class SongListActivity extends AppCompatActivity {
 
     ListView lvSongs;
     Button btnFilter, btnBack;
+    CustomAdapter adapter, adapter2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,19 +28,18 @@ public class SongListActivity extends AppCompatActivity {
         DBHelper db = new DBHelper(SongListActivity.this);
         ArrayList<Song> data = db.getSongs();
         db.close();
-        ArrayAdapter aaSongs = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, data);
-        lvSongs.setAdapter(aaSongs);
+        adapter = new CustomAdapter(SongListActivity.this, R.layout.row, data);
+        lvSongs.setAdapter(adapter);
 
         btnFilter.setOnClickListener(v -> {
             ArrayList<Song> filter = db.getFilteredSongs();
             db.close();
-            ArrayAdapter aaFilter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, filter);
-            lvSongs.setAdapter(aaFilter);
-            aaFilter.notifyDataSetChanged();
+            adapter2 = new CustomAdapter(SongListActivity.this, R.layout.row, filter);
+            lvSongs.setAdapter(adapter2);
+            adapter2.notifyDataSetChanged();
         });
 
         lvSongs.setOnItemClickListener((parent, view, position, id) -> {
-
             Song list = data.get(position);
             Intent intent = new Intent(SongListActivity.this, SongSelectActivity.class);
             intent.putExtra("list", list);

@@ -42,10 +42,10 @@ public class Song implements Serializable {
     @NonNull
     @Override
     public String toString() {
-        String strStars = "*".repeat(stars);
+        String strStars = "* ".repeat(stars);
         return title + "\n"
-                + singers + " - " + year + "\n"
-                + strStars;
+                + year + "        " + strStars + "\n"
+                + singers;
     }
 
     public void setSongContent(String title, String singers, int year, int stars) {

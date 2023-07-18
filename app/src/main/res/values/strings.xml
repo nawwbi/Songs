@@ -38,7 +38,16 @@
     <string name="radioButton9">4</string>
     <string name="radioButton10">5</string>
 
+    <string name="textViewHeader2">Edit Song</string>
     <string name="button4">UPDATE</string>
     <string name="button5">DELETE</string>
     <string name="button6">CANCEL</string>
+
+    <string name="textViewSong">Song</string>
+    <string name="textViewHeader">My Songs</string>
+
+    <string name="textViewSongs">Song name</string>
+    <string name="textViewYear">Year</string>
+    <string name="textViewStars">Stars</string>
+    <string name="textViewSingers">Singer</string>
 </resources>
